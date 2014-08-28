@@ -1,0 +1,50 @@
+var cards = [
+  { 
+    "value": "1",
+    "imgUrl": "public/images/kitten1.png"
+  },
+  { 
+    "value": "2",
+    "imgUrl": "public/images/kitten1.png"
+  },
+  { 
+    "value": "3",
+    "imgUrl": "public/images/kitten2.png"
+  },
+  { 
+    "value": "4",
+    "imgUrl": "public/images/kitten2.png"
+  },
+  { 
+    "value": "5",
+    "imgUrl": "public/images/kitten3.png"
+  },
+  { 
+    "value": "6",
+    "imgUrl": "public/images/kitten3.png"
+  },
+  { 
+    "value": "7",
+    "imgUrl": "public/images/kitten4.png"
+  },
+  { 
+    "value": "8",
+    "imgUrl": "public/images/kitten4.png"
+  },
+  { 
+    "value": "9",
+    "imgUrl": "public/images/kitten5.png"
+  },
+  { 
+    "value": "10",
+    "imgUrl": "public/images/kitten5.png"
+  },
+  { 
+    "value": "11",
+    "imgUrl": "public/images/kitten6.png"
+  },
+  { 
+    "value": "12",
+    "imgUrl": "public/images/kitten6.png"
+  }
+]

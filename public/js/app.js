@@ -1,9 +1,5 @@
-// create a filename for an image, given a Card obj
-function cardName() {
-  return "kitten" + this.num + ".jpg";
-}
 
-// constructor for Card objects
-function Card(num) {
-  this.num = num;
-}
+// // display cards on board
+// $(document).ready(function() {
+//   $('.card').each.html("<img src='public/back.jpg'>")
+// });

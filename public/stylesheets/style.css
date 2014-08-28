@@ -1,0 +1,28 @@
+/* debugging */
+* {
+  border: 1px solid red;
+}
+
+/************ NAVBAR ************/
+
+.logo {
+  text-align: center;
+  font-size: 2em;
+}
+
+.dashboard {
+  text-align: center;
+}
+
+.shuffleButton {
+}
+
+/************ GAME BOARD ************/
+
+.card {
+  /* debugging */
+  border: 1px solid blue;
+  margin: 0 auto;
+  width: 11em;
+  height: 12em;
+}

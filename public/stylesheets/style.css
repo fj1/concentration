@@ -23,6 +23,8 @@
   /* debugging */
   border: 1px solid blue;
   margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
   width: 11em;
   height: 12em;
 }

@@ -52,12 +52,32 @@ var cards = [
 // display cards on board on shuffle button
 // TO-DO: simulate shuffle button click on page load?
 $('.shuffleButton').click(function() {
-    for (var i = 0; i < 12; i++) {
-      var pic = cards[i].imgUrl;
-      var currentCard = $('.card:eq(' + i + ')')
-      // console.log("currentCard is ", currentCard);
-      currentCard.html("<img src='" + pic + "'>");
+  // Fisher-Yates shuffle
+  shuffle(cards);
+  function shuffle(array) {
+    var m = array.length
+    var t;
+    var i;
+    // While there remain elements to shuffle...
+    while (m) {
+      // Pick a remaining element...
+      i = Math.floor(Math.random() * m--);
+      // And swap it with the current element.
+      t = array[m];
+      array[m] = array[i];
+      array[i] = t;
     }
+    console.log("array is now", array);
+    return array;
+  }
+
+  // put cards on board
+  for (var i = 0; i < 12; i++) {
+    var pic = cards[i].imgUrl;
+    var currentCard = $('.card:eq(' + i + ')')
+    // console.log("currentCard is ", currentCard);
+    currentCard.html("<img src='" + pic + "'>");
+  }
 });
 
 

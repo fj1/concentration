@@ -72,11 +72,11 @@ function dealCards() {
   for (var i = 0; i < 12; i++) {
     var pic = cards[i].imgUrl;
     var currentCard = $('.card:eq(' + i + ')');
-    currentCard.html("<img src='" + pic + "'>");
+    // currentCard.html("<img src='" + pic + "'>");
+    currentCard.css("background-image", "url(" + pic + ")");
   }
 }
 
-// TO-DO: simulate shuffle button click on page load?
 // ************ SHUFFLE BUTTON ************
 $('.shuffleButton').click(function() {
   shuffle(cards);
@@ -88,6 +88,10 @@ $('.shuffleButton').click(function() {
 // ************ GAME PLAY ************
 function gameOn() {
   // $('.card').click ---> show card
+  $('.card img').click(function() {
+    console.log("this is ", this);
+    $(this).fadeOut();
+  })
   // second $('.card').click ---> show 2nd card
   // compare cards
 }

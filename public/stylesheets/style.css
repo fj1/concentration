@@ -27,9 +27,11 @@
   margin-bottom: 10px;
   width: 11em;
   height: 12em;
+  background-size: cover;
+  /*background-repeat: no-repeat;*/
 }
 
-img {
+.card img {
   width: 11em;
   height: 12em;
 }

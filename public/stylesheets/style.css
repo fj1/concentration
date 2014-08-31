@@ -1,7 +1,7 @@
 /* debugging */
-* {
+/** {
   border: 1px solid red;
-}
+}*/
 
 /************ NAVBAR ************/
 
@@ -20,8 +20,6 @@
 /************ GAME BOARD ************/
 
 .card {
-  /* debugging */
-  border: 1px solid blue;
   margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 10px;

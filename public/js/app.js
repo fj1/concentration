@@ -88,12 +88,16 @@ $('.shuffleButton').click(function() {
 // ************ GAME PLAY ************
 function gameOn() {
   // $('.card').click ---> show card
+  var cardsShowing = 0;
+
   $('.card img').click(function() {
-    console.log("this is ", this);
     $(this).fadeOut();
-  })
-  // second $('.card').click ---> show 2nd card
-  // compare cards
+    cardsShowing++;
+    console.log("after click, cardsShowing is ", cardsShowing);
+    if (cardsShowing === 2) {
+      console.log("hey there are two cards showing!");
+    }
+  });
 }
 
 

@@ -87,19 +87,33 @@ $('.shuffleButton').click(function() {
 
 // ************ GAME PLAY ************
 function gameOn() {
-  // $('.card').click ---> show card
-  var cardsShowing = 0;
+  // var cardsShowing;
 
   $('.card img').click(function() {
     $(this).fadeOut();
-    cardsShowing++;
-    console.log("after click, cardsShowing is ", cardsShowing);
-    if (cardsShowing === 2) {
+    $(this).addClass('cards-showing');
+
+    if ( $('.cards-showing').length === 2 ) {
       console.log("hey there are two cards showing!");
+      compareCards();
     }
+
+    // cardsShowing++;
+    // // console.log("after click, cardsShowing is ", cardsShowing);
+    // if (cardsShowing === 2) {
+    //   console.log("hey there are two cards showing!");
+    //   compareCards();
+    // }
   });
 }
 
+function compareCards() {
+  // what if, instead of looking for display:none
+  // i add a class to the element when it is clicked
+  // and then i only have to find 2 instances of that class?
+
+  
+}
 
 
 

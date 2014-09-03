@@ -98,15 +98,29 @@ function gameOn() {
 
 function compareCards() {
   var c = $('.cards-showing');
-  console.log("c is ", c);
+  // console.log("c is ", c);
 
   if ( c[0].style.cssText == c[1].style.cssText ) {
     console.log("we have a match!");
+    c.each(function() {
+      $(this).addClass('matched-pair');
+      $(this).removeClass('cards-showing');
+    });
   }
   else {
     console.log("no match");
+    clearUnmatchedPair();
+    c.each(function() {
+      $(this).removeClass('cards-showing');
+    });
   }
 };
+
+function clearUnmatchedPair() {
+  setTimeout(function() {
+    $('.card img').fadeIn();
+  }, 3000);
+}
 
 
 

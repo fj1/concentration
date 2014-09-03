@@ -72,7 +72,6 @@ function dealCards() {
   for (var i = 0; i < 12; i++) {
     var pic = cards[i].imgUrl;
     var currentCard = $('.card:eq(' + i + ')');
-    // currentCard.html("<img src='" + pic + "'>");
     currentCard.css("background-image", "url(" + pic + ")");
   }
 }
@@ -81,39 +80,33 @@ function dealCards() {
 $('.shuffleButton').click(function() {
   shuffle(cards);
   dealCards();
-  // play game
   gameOn();
 });
 
 // ************ GAME PLAY ************
 function gameOn() {
-  // var cardsShowing;
-
   $('.card img').click(function() {
     $(this).fadeOut();
-    $(this).addClass('cards-showing');
+    $(this).parent().addClass('cards-showing');
 
     if ( $('.cards-showing').length === 2 ) {
       console.log("hey there are two cards showing!");
       compareCards();
     }
-
-    // cardsShowing++;
-    // // console.log("after click, cardsShowing is ", cardsShowing);
-    // if (cardsShowing === 2) {
-    //   console.log("hey there are two cards showing!");
-    //   compareCards();
-    // }
   });
 }
 
 function compareCards() {
-  // what if, instead of looking for display:none
-  // i add a class to the element when it is clicked
-  // and then i only have to find 2 instances of that class?
+  var c = $('.cards-showing');
+  console.log("c is ", c);
 
-  
-}
+  if ( c[0].style.cssText == c[1].style.cssText ) {
+    console.log("we have a match!");
+  }
+  else {
+    console.log("no match");
+  }
+};
 
 
 

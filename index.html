@@ -103,11 +103,11 @@
     <script type="text/javascript">
       // display cards on board (showing the card backs)
       $(document).ready(function() {
+        $('#introModal').modal('show');
         $('.card').html("<img src='public/images/back.jpg'>");
         shuffle(cards);
         dealCards();
         gameOn();
-        $('#introModal').modal('show');
       });
     </script>
 

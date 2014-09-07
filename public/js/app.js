@@ -104,6 +104,9 @@ function compareCards() {
     console.log("we have a match!");
     c.each(function() {
       $(this).addClass('matched-pair');
+      if ( $('.matched-pair').length === 12) {
+        gameOver();
+      }
       $(this).removeClass('cards-showing');
     });
   }
@@ -126,6 +129,9 @@ function clearUnmatchedPair() {
   }, 2500);
 }
 
+function gameOver() {
+  console.log("you won!");
+}
 
 
 

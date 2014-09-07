@@ -97,8 +97,8 @@ function gameOn() {
 }
 
 function compareCards() {
-  var c = $('.cards-showing');
-  // console.log("c is ", c);
+  // populate .cards-showing
+  c = $('.cards-showing');
 
   if ( c[0].style.cssText == c[1].style.cssText ) {
     console.log("we have a match!");
@@ -108,18 +108,22 @@ function compareCards() {
     });
   }
   else {
-    console.log("no match");
+    console.log("not a match");
+    // clear unmatched pair of images
     clearUnmatchedPair();
-    c.each(function() {
-      $(this).removeClass('cards-showing');
-    });
+    // remove 'cards-showing' class
+    setTimeout(function() {
+      c.each(function() {
+        $(this).removeClass('cards-showing');
+      });
+    }, 2750);
   }
 };
 
 function clearUnmatchedPair() {
   setTimeout(function() {
-    $('.card img').fadeIn();
-  }, 3000);
+    $('.cards-showing img').fadeIn();
+  }, 2500);
 }
 
 

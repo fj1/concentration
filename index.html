@@ -19,10 +19,10 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            <h2 class="modal-title" id="myModalLabel">Welcome to Kitty Koncentration!</h4>
+            <h2 class="modal-title" id="myModalLabel">Welcome to Kitty Koncentration!</h2>
           </div>
           <div class="modal-body">
-            <h4>You might remember the game of Concentration from when you were a kid: Simply click on a card to reveal an image, and then click on a second card to reveal a second image. The goal is to find all 6 matching pairs of images.</h6>
+            <h4>You might remember the game of Concentration from when you were a kid: Simply click on a card to reveal an image, and then click on a second card to reveal a second image. The goal is to find all 6 matching pairs of images.</h4>
             <h3>Good luck!</h3>
           </div>
           <div class="modal-footer">
@@ -97,12 +97,30 @@
 
     </div> <!-- end class="container-fluid" -->
 
+    <!-- GAME OVER MODAL -->
+    <div id="gameOverModal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h2 class="modal-title" id="myModalLabel">You won!</h4>
+          </div>
+          <div class="modal-body">
+            <h3>Good job! You found all the matching pairs of kittens!</h3>
+          </div>
+          <div class="modal-footer">
+            <button type="button" data-dismiss="modal">Play again?</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- jq -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
     <script type="text/javascript">
-      // display cards on board (showing the card backs)
       $(document).ready(function() {
+        // display cards on board (showing the card backs)
         $('#introModal').modal('show');
         $('.card').html("<img src='public/images/back.jpg'>");
         shuffle(cards);

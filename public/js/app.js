@@ -131,6 +131,7 @@ function clearUnmatchedPair() {
 
 function gameOver() {
   console.log("you won!");
+  $('#gameOverModal').modal('show');
 }
 
 

@@ -14,7 +14,8 @@
   text-align: center;
 }
 
-.shuffleButton {
+.shuffleButton .hidden {
+  display: none;
 }
 
 /************ GAME BOARD ************/

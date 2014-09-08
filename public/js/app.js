@@ -134,6 +134,14 @@ function gameOver() {
   $('#gameOverModal').modal('show');
 }
 
+$('.newGameButton').click(function() {
+  $('.card').removeClass('matched-pair');
+  $('.card').html("<img src='public/images/back.jpg'>");
+  shuffle(cards);
+  dealCards();
+  gameOn();
+});
+
 
 
 

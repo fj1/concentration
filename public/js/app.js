@@ -85,18 +85,30 @@ $('.shuffleButton').click(function() {
 
 // ************ TIMER ************
 
+var timerID;
+
 function startTimer() {
     var sec = 0;
     // padding the values for expected time output: hh:mm:ss
     // if the value is over 9, it returns the val: ie. val = 19
     // otherwise it returns 0 + value: ie. val = 04
-    function pad(val) { return val > 9 ? val : "0" + val; }
-    setInterval(function () {
+    function pad(val) { 
+      return val > 9 ? val : "0" + val; 
+    }
+    timerID = setInterval(function () {
         $("#seconds").html(pad(sec++ % 60));
         // parseInt parses a string and returns an int
         // the 10 says to use base 10 
         $("#minutes").html(pad(parseInt(sec / 60, 10) % 60));
     }, 1000);
+}
+
+function stopTimer() {
+  clearInterval(timerID);
+  var seconds = $('#seconds').text();
+  console.log("seconds are", seconds);
+  var minutes = $('#minutes').text();
+  console.log("minutes are ", minutes);
 }
 
 $('.startGame').click(function() {
@@ -151,6 +163,7 @@ function clearUnmatchedPair() {
 
 function gameOver() {
   console.log("you won!");
+  stopTimer();
   $('#gameOverModal').modal('show');
 }
 

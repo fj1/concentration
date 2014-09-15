@@ -177,6 +177,7 @@ $('.newGameButton').click(function() {
   shuffle(cards);
   dealCards();
   gameOn();
+  startTimer();
 });
 
 

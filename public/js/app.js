@@ -103,11 +103,14 @@ function startTimer() {
     }, 1000);
 }
 
+var seconds;
+var minutes;
+
 function stopTimer() {
   clearInterval(timerID);
-  var seconds = $('#seconds').text();
+  seconds = $('#seconds').text();
   console.log("seconds are", seconds);
-  var minutes = $('#minutes').text();
+  minutes = $('#minutes').text();
   console.log("minutes are ", minutes);
 }
 
@@ -164,6 +167,7 @@ function clearUnmatchedPair() {
 function gameOver() {
   console.log("you won!");
   stopTimer();
+  $('.endGameText').text("Good job! You found all the matching pairs of kittens in " + minutes + " minutes and " + seconds + " seconds!");
   $('#gameOverModal').modal('show');
 }
 

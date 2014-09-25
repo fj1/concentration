@@ -167,7 +167,8 @@ function clearUnmatchedPair() {
 function gameOver() {
   console.log("you won!");
   stopTimer();
-  $('.endGameText').text("Good job! You found all the matching pairs of kittens in " + minutes + " minutes and " + seconds + " seconds!");
+  endText();
+  // $('.endGameText').text("Good job! You found all the matching pairs of kittens in " + minutes + " minutes and " + seconds + " seconds!");
   $('#gameOverModal').modal('show');
 }
 
@@ -179,6 +180,39 @@ $('.newGameButton').click(function() {
   gameOn();
   startTimer();
 });
+
+function endText() {
+  // if 00 minutes and 19 seconds
+  if (minutes == 00 && seconds[0] != 0) {
+    $('.endGameText').text("Good job! You found all the matching pairs of kittens in " + seconds + " seconds!");
+  }
+  // if 01 minutes and 09 seconds
+  else if (minutes[0] == 0 && seconds[0] == 0 ) {
+    minutes = minutes[1];
+    seconds = seconds[1];
+    if (minutes == 1) {
+      $('.endGameText').text("Good job! You found all the matching pairs of kittens in " + minute + " minute and " + seconds + " seconds!");      
+    }
+    else {
+      $('.endGameText').text("Good job! You found all the matching pairs of kittens in " + minutes + " minutes and " + seconds + " seconds!");
+    }   
+  }
+  // if 01 minutes and 19 seconds
+  else if (minutes[0] == 0 && seconds[0] != 0 ) {
+    minutes = minutes[1];
+    var word;
+    if (minutes == 1) {
+      $('.endGameText').text("Good job! You found all the matching pairs of kittens in " + minutes + " minute and " + seconds + " seconds!");      
+    }
+    else {
+      $('.endGameText').text("Good job! You found all the matching pairs of kittens in " + minutes + " minutes and " + seconds + " seconds!");      
+    }
+  }
+  // else
+  else {
+    $('.endGameText').text("Good job! You found all the matching pairs of kittens in " + minutes + " minutes and " + seconds + " seconds!");
+  }
+}
 
 
 

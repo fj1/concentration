@@ -3,19 +3,47 @@
   border: 1px solid red;
 }*/
 
+body {
+  background-color: #5fa97d;
+  font-family: 'Handlee', cursive;
+}
+
 /************ NAVBAR ************/
 
 .logo {
   text-align: center;
-  font-size: 2em;
+  font-size: 3em;
 }
 
 .dashboard {
   text-align: center;
 }
 
+.timer {
+  font-size: 1.5em;
+}
+
 .shuffleButton .hidden {
   display: none;
+}
+
+/************ MODAL ************/
+
+.modal {
+  text-align: center;
+}
+
+button {
+  font-size: 1.5em;
+  border: 1px solid #f9c732;
+  border-radius: 8%;
+  box-shadow: 1px 1px 1px #f9c732;
+  background-color: #f9d832;
+  transition: background-color 1s ease;
+}
+
+button:hover {
+  background-color: #e8f932;
 }
 
 /************ GAME BOARD ************/
@@ -27,7 +55,7 @@
   width: 11em;
   height: 12em;
   background-size: cover;
-  /*background-repeat: no-repeat;*/
+  box-shadow: 2px 2px 2px #696969;
 }
 
 .card img {
